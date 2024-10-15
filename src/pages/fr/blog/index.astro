@@ -32,30 +32,33 @@ const otherPosts: CollectionEntry<"blog">[] = blogPosts.slice(1);
 // Define variables for page content
 const title: string = "Votre Passerelle vers l'Excellence en Construction";
 const subTitle: string =
-  "Explorez les dernières actualités, astuces et analyses de ScrewFast pour améliorer vos projets de construction. Des mises en avant de produits aux stratégies de gestion de projet, notre blog est votre ressource incontournable pour tout ce qui concerne les outils et la construction.";
+  "Explorez les dernières actualités, astuces et analyses de Brilliant Techno Service pour améliorer vos projets de construction. Des mises en avant de produits aux stratégies de gestion de projet, notre blog est votre ressource incontournable pour tout ce qui concerne les outils et la construction.";
 const secondTitle: string = "Perspectives";
 const secondSubTitle: string =
-  "Restez à jour avec les dernières tendances et évolutions de l'industrie de la construction grâce aux analyses de l'équipe d'experts de ScrewFast.";
+  "Restez à jour avec les dernières tendances et évolutions de l'industrie de la construction grâce aux analyses de l'équipe d'experts de Brilliant Techno Service.";
 
 const pageTitle: string = `Blog | ${SITE.title}`;
 ---
 
-<MainLayout lang="fr"
+<MainLayout
+  lang="fr"
   title={pageTitle}
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/fr/blog",
-    "url": "https://screwfast.uk/fr/blog",
-    "name": "Blog | ScrewFast",
-    "description": "Restez informé des dernières tendances et évolutions dans le secteur de la construction avec les analyses de l'équipe d'experts de ScrewFast.",
-    "isPartOf": {
+    "@id": "https://btsserv.net/fr/blog",
+    url: "https://btsserv.net/fr/blog",
+    name: "Blog | Brilliant Techno Service",
+    description:
+      "Restez informé des dernières tendances et évolutions dans le secteur de la construction avec les analyses de l'équipe d'experts de Brilliant Techno Service.",
+    isPartOf: {
       "@type": "WebSite",
-      "url": "https://screwfast.uk/fr",
-      "name": "ScrewFast",
-      "description": "ScrewFast propose des outils matériels de premier ordre et des services de construction experts pour répondre à tous vos besoins de projet."
+      url: "https://btsserv.net/fr",
+      name: "Brilliant Techno Service",
+      description:
+        "Brilliant Techno Service propose des outils matériels de premier ordre et des services de construction experts pour répondre à tous vos besoins de projet.",
     },
-    "inLanguage": "fr"
+    inLanguage: "fr",
   }}
 >
   <section
@@ -82,7 +85,11 @@ const pageTitle: string = `Blog | ${SITE.title}`;
   >
     <!--Blog posts grid-->
     <div class="grid gap-6 lg:grid-cols-2">
-      {otherPosts.map((blogEntry) => <CardBlog blogEntry={blogEntry} blogLocale="fr"/>)}
+      {
+        otherPosts.map((blogEntry) => (
+          <CardBlog blogEntry={blogEntry} blogLocale="fr" />
+        ))
+      }
     </div>
   </section>
   <!--Most recent blog post-->

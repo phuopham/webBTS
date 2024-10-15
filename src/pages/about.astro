@@ -1,0 +1,100 @@
+---
+import LeftSection from "@/components/ui/blocks/LeftSection.astro";
+import RightSection from "@/components/ui/blocks/RightSection.astro";
+import { SITE } from "@/data_files/constants";
+import MainLayout from "@/layouts/MainLayout.astro";
+import ccsimg from "@/images/about/servicedesk.webp";
+const pageTitle: string = `Blog | ${SITE.title}`;
+interface Article {
+    isRightSection: boolean;
+    title: string;
+    subTitle: string;
+    single?: boolean;
+    imgOne?: any;
+    imgOneAlt?: string;
+    imgTwo?: any;
+    imgTwoAlt?: string;
+}
+
+const articles: Article[] = [
+    {
+        isRightSection: true,
+        title: "Contact Center Services (CCS)",
+        subTitle:
+            "Brilliant Techno Services Contact Centre Solutions understand the significance of delivering cost-effective, world-class technical support. From tier-1 handling of simple issues to multi-tier support applications, our seasoned technical experts address complexities. Our 24×7 scalable technical support adapts to demand fluctuations, ensuring consistent customer management across different product lines and technologies.",
+        single: true,
+        imgOne: ccsimg,
+        imgOneAlt: "Service Desk supporting client remotely",
+    },
+];
+---
+
+<MainLayout
+    title={pageTitle}
+    structuredData={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://btsserv.net/blog",
+        url: "https://btsserv.net/blog",
+        name: "Blog | Brilliant Techno Service",
+        description:
+            "Stay up-to-date with the latest trends and developments in the construction industry with insights from Brilliant Techno Service's team of industry experts.",
+        isPartOf: {
+            "@type": "WebSite",
+            url: "https://btsserv.net/",
+            name: "Brilliant Techno Service",
+            description:
+                "Brilliant Techno Service offers top-tier hardware tools and expert construction services to meet all your project needs.",
+        },
+        inLanguage: "en-US",
+    }}
+>
+    <section
+        class="mx-auto max-w-[85rem] space-y-8 px-4 pt-16 sm:px-6 lg:px-8 2xl:max-w-full"
+    >
+        <!--Page header-->
+        <div class="mx-auto max-w-3xl text-left sm:text-center">
+            <h1
+                class="block text-balance text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-5xl lg:text-6xl"
+            >
+                Elevating Your Business Beyond Boundaries
+            </h1>
+
+            <p
+                class="mt-4 text-pretty text-lg text-neutral-600 dark:text-neutral-400"
+            >
+                At Brilliant Techno Services, we transcend the role of a
+                conventional IT Solutions and Technology Provider. Leveraging
+                our extensive industry expertise, we introduce a spectrum of IT
+                Enabled Services categorized under Auxiliary Services.
+                Meticulously crafted to meet diverse client needs, many of these
+                services are delivered through our esteemed subsidiaries and
+                affiliates.
+            </p>
+        </div>
+    </section>
+    <section>
+        {
+            articles.map((article) => {
+                return article.isRightSection ? (
+                    <RightSection
+                        title={article.title}
+                        subTitle={article.subTitle}
+                        single={article.single}
+                        imgOne={article.imgOne}
+                        imgOneAlt={article.imgOneAlt}
+                        imgTwo={article.imgTwo}
+                        imgTwoAlt={article.imgTwoAlt}
+                    />
+                ) : (
+                    <LeftSection
+                        title={article.title}
+                        subTitle={article.subTitle}
+                        img={article.imgOne}
+                        imgAlt={article.imgOneAlt}
+                    />
+                );
+            })
+        }
+    </section>
+</MainLayout>
