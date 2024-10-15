@@ -1,19 +1,19 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "ScrewFast",
-  tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  title: "Brilliant Techno Service",
+  tagline: "Your Trusted Partner for Cutting-Edge Engineering Solutions",
+  description: "Brilliant Techno Service stand at the forefront of the industry, specializing in the delivery of innovative and sustainable engineering solutions. Our core focus lies in providing top-notch IT infrastructure management services, tailored to meet the diverse needs of a wide range of industries",
+  description_short: "Brilliant Techno Service lead the industry with innovative, sustainable engineering solutions and top-notch IT infrastructure management, tailored for diverse industries.",
+  url: "https://btsserv.net/",
+  author: "phuopham",
 };
 
 export const SEO = {
   title: SITE.title,
   description: SITE.description,
   structuredData: {
-    "@context": "https://schema.org",
+    "@context": "https://btsserv.net/",
     "@type": "WebPage",
     inLanguage: "en-US",
     "@id": SITE.url,
@@ -33,7 +33,7 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `${SITE.title}: IT service management`,
+  description: "Brilliant Techno Service stand at the forefront of the industry, specializing in the delivery of innovative and sustainable engineering solutions. Our core focus lies in providing top-notch IT infrastructure management services, tailored to meet the diverse needs of a wide range of industries",
   image: ogImageSrc,
 };

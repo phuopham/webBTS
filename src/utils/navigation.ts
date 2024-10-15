@@ -3,26 +3,27 @@ const navBarLinks = [
   { name: "Home", url: "/" },
   { name: "Products", url: "/products" },
   { name: "Services", url: "/services" },
+  { name: "About", url: "/about" },
   { name: "Blog", url: "/blog" },
   { name: "Contact", url: "/contact" },
 ];
 // An array of links for footer
 const footerLinks = [
   {
-    section: "Ecosystem",
+    section: "Contact Information",
     links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "/products" },
-      { name: "Construction Services", url: "/services" },
+      { name: `Email: sales@btsserv.com`, url: "mailto:sales@btsserv.com" },
+      { name: "Phone: +92 302 3738158", url: "tel:+923023738158" },
+      { name: "Address: 71-75 Shelton Street Covent Garden London.", url: "#" },
+      { name: "Ward no 14B, street no 10 near SoFi Faraz darbar kot addu muzaffargarh Punjab Pakistan", url: "#" },
+      { name: "Address: 1209 mountain rd pl ne ste ralbuquerque, NM 87110", url: "#" },
     ],
   },
   {
     section: "Company",
     links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
+      { name: "About us", url: "/about" },
       { name: "Careers", url: "#" },
-      { name: "Customers", url: "#" },
     ],
   },
 ];
