@@ -8,7 +8,7 @@ import { getCollection } from "astro:content";
 // Use `getStaticPaths` to generate static routes for generated pages on build
 export async function getStaticPaths() {
   const insightPosts = await getCollection("insights", ({ id }) =>
-    id.startsWith("en/")
+    id.startsWith("en/"),
   );
   return insightPosts.map((post) => {
     const slugWithoutLang = post.slug.replace(/^en\//, ""); // Remove the "fr/" prefix
@@ -43,7 +43,7 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
           </div>
           <div
             id="progress-mobile"
-            class="fixed left-0 top-0 h-2 w-full bg-gradient-to-r from-orange-400/30 to-orange-400 md:hidden"
+            class="from-sky-400/30 to-sky-400 fixed left-0 top-0 h-2 w-full bg-gradient-to-r md:hidden"
           >
           </div>
           <div id="pin" class="mt-10 hidden space-y-4 md:block">
@@ -52,7 +52,7 @@ const pageTitle: string = `${post.data.title} | ${SITE.title}`;
             >
               <div
                 id="progress"
-                class="h-px w-full bg-gradient-to-r from-orange-400/30 to-orange-400"
+                class="from-sky-400/30 to-sky-400 h-px w-full bg-gradient-to-r"
               >
               </div>
             </div>

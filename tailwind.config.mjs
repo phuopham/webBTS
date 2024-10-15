@@ -15,13 +15,13 @@ export default {
       gray: colors.gray,
       indigo: colors.indigo,
       neutral: colors.neutral,  // Used mainly for text color
-      yellow: {
+      brightsky: {
         50: "#f0f9ff",
         100: "#e0f2fe",
         400: "#7dd3fc",
         500: "#38bdf8",
       }, // Accent colors, used mainly for star color, heading and buttons
-      orange: {
+      sky: {
         100: "#e0f2fe",
         200: "#0ea5e9",
         300: "#0284c7",

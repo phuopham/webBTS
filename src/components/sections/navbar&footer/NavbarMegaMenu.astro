@@ -20,7 +20,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 >
   <!-- Navigation container -->
   <nav
-    class="relative mx-2 w-full rounded-[36px] border border-yellow-100/40 bg-yellow-50/60 px-4 py-3 backdrop-blur-md dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto"
+    class="border-brightsky-100/40 bg-brightsky-50/60 relative mx-2 w-full rounded-[36px] border px-4 py-3 backdrop-blur-md dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto"
     aria-label="Global"
   >
     <div class="flex items-center justify-between">
@@ -151,7 +151,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 
       if (dispatchEvent) {
         window.dispatchEvent(
-          new CustomEvent("on-hs-appearance-change", { detail: theme })
+          new CustomEvent("on-hs-appearance-change", { detail: theme }),
         );
       }
     },
@@ -181,10 +181,10 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 
   window.addEventListener("load", () => {
     const $clickableThemes = document.querySelectorAll(
-      "[data-hs-theme-click-value]"
+      "[data-hs-theme-click-value]",
     );
     const $switchableThemes = document.querySelectorAll(
-      "[data-hs-theme-switch]"
+      "[data-hs-theme-switch]",
     );
 
     $clickableThemes.forEach(($item) => {
@@ -192,8 +192,8 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         HSThemeAppearance.setAppearance(
           $item.getAttribute("data-hs-theme-click-value"),
           true,
-          $item
-        )
+          $item,
+        ),
       );
     });
 
