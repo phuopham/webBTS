@@ -20,19 +20,12 @@ const footerLinks = [
   {
     section: "Company",
     links: [
+      { name: "Our Services", url: "webBTS/services" },
       { name: "About us", url: "webBTS/about" },
-      { name: "Careers", url: "#" },
+
     ],
   },
 ];
-// An object of links for social icons
-// const socialLinks = {
-//   facebook: "https://www.facebook.com/",
-//   x: "https://twitter.com/",
-//   github: "https://github.com/mearashadowfax/Brilliant Techno Service",
-//   google: "https://www.google.com/",
-//   slack: "https://slack.com/",
-// };
 
 export default {
   navBarLinks,
