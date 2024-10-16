@@ -1,9 +1,9 @@
 // An array of links for navigation bar
 const navBarLinks = [
-  { name: "Home", url: "/" },
-  { name: "Services", url: "/services" },
-  { name: "About", url: "/about" },
-  { name: "Contact", url: "/contact" },
+  { name: "Home", url: "/webBTS" },
+  { name: "Services", url: "/webBTS/services" },
+  { name: "About", url: "/webBTS/about" },
+  { name: "Contact", url: "/webBTS/contact" },
 ];
 // An array of links for footer
 const footerLinks = [
@@ -20,22 +20,21 @@ const footerLinks = [
   {
     section: "Company",
     links: [
-      { name: "About us", url: "/about" },
+      { name: "About us", url: "webBTS/about" },
       { name: "Careers", url: "#" },
     ],
   },
 ];
 // An object of links for social icons
-const socialLinks = {
-  facebook: "https://www.facebook.com/",
-  x: "https://twitter.com/",
-  github: "https://github.com/mearashadowfax/Brilliant Techno Service",
-  google: "https://www.google.com/",
-  slack: "https://slack.com/",
-};
+// const socialLinks = {
+//   facebook: "https://www.facebook.com/",
+//   x: "https://twitter.com/",
+//   github: "https://github.com/mearashadowfax/Brilliant Techno Service",
+//   google: "https://www.google.com/",
+//   slack: "https://slack.com/",
+// };
 
 export default {
   navBarLinks,
   footerLinks,
-  socialLinks,
 };
