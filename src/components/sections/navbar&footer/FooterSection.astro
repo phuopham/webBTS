@@ -3,6 +3,8 @@
 import enStrings from "@utils/navigation.ts";
 import frStrings from "@utils/fr/navigation.ts";
 import { SITE } from "@data/constants";
+import { Image } from "astro:assets";
+import logo from "@/images/bts-logo.png";
 
 // Select the correct translation based on the page's lang prop:
 const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
@@ -25,8 +27,13 @@ const crafted: string =
     <div class="grid grid-cols-3 gap-6 md:grid-cols-4 lg:grid-cols-5">
       <div class="col-span-full lg:col-span-1">
         <!-- Brand Logo -->
-        <!-- <BrandLogo class="h-auto w-32" /> -->
-        <img src="webBTS/bts-logo.png" class="h-auto w-32" alt="company logo" />
+        <Image
+          src={logo}
+          alt="company logo"
+          class="h-auto"
+          draggable={"false"}
+          format={"png"}
+        />
       </div>
       <!-- An array of links for Product and Company sections -->
       {
