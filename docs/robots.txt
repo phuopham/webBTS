@@ -16,4 +16,4 @@ Crawl-delay: 2
 User-agent: *
 Disallow: /
 
-Sitemap: https://btsserv.net/sitemap-index.xml
+Sitemap: https://phuopham.github.io/webBTS/sitemap-index.xml

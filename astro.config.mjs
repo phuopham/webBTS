@@ -7,10 +7,7 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://btsserv.net/",
-  image: {
-    domains: ["images.unsplash.com"],
-  },
+  site: "https://phuopham.github.io/webBTS/",
   // i18n: {
   //   defaultLocale: "en",
   //   locales: ["en", "fr"],
