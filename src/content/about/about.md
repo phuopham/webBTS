@@ -1,7 +1,7 @@
 ---
 title: "About Us - Brilliant Techno Service"
 description: "bac"
-cardImage: "@/images/about/topdownworkingtable.jpg"
+cardImage: "src/images/about/topdownworkingtable.jpg"
 cardImageAlt: "Top view mechanical tools arrangement"
 ---
 
