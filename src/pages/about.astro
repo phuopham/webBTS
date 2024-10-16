@@ -6,21 +6,6 @@ import { Image } from "astro:assets";
 import wdimg from "@/images/about/jobwelldone.jpg";
 import * as about from "@/content/about/about.md";
 import wtimg from "@/images/about/topdownworkingtable.jpg";
-// Use `getStaticPaths` to generate static routes for generated pages on build
-// export async function getStaticPaths() {
-//   const insightPosts = await getCollection("insights", ({ id }) =>
-//     id.startsWith("en/"),
-//   );
-//   return insightPosts.map((post) => {
-//     const slugWithoutLang = post.slug.replace(/^en\//, ""); // Remove the "fr/" prefix
-//     return {
-//       params: { slug: slugWithoutLang },
-//       props: { post },
-//     };
-//   });
-// }
-
-// Get the props for this page that define a specific insight post
 
 const pageTitle: string = `${about.frontmatter.title} | ${SITE.title}`;
 
@@ -73,9 +58,11 @@ const Content = about.Content;
               </ul>
             </div>
           </div>
-          <div class="m-auto h-64 rounded-lg shadow-lg md:h-auto">
+          <div
+            class="m-auto hidden h-64 rounded-lg shadow-lg md:block md:h-auto"
+          >
             <Image
-              class="h-full w-full object-cover object-center"
+              class="h-full w-full rounded-lg object-cover object-center shadow-lg"
               src={wdimg}
               alt="Job well done"
               draggable={"false"}
@@ -90,6 +77,15 @@ const Content = about.Content;
           >
             <Content />
           </article>
+          <div class="m-auto h-64 rounded-lg shadow-lg md:hidden md:h-auto">
+            <Image
+              class="h-full w-full rounded-lg object-cover object-center shadow-lg"
+              src={wdimg}
+              alt="Job well done"
+              draggable={"false"}
+              format={"jpg"}
+            />
+          </div>
         </div>
       </div>
     </div>
