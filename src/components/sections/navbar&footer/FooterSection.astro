@@ -4,7 +4,7 @@ import enStrings from "@utils/navigation.ts";
 import frStrings from "@utils/fr/navigation.ts";
 import { SITE } from "@data/constants";
 import { Image } from "astro:assets";
-import logo from "@/images/bts-logo.png";
+import logo from "@/images/bts-logo2.png";
 
 // Select the correct translation based on the page's lang prop:
 const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
@@ -30,7 +30,7 @@ const crafted: string =
         <Image
           src={logo}
           alt="company logo"
-          class="h-auto"
+          class="h-auto max-w-44"
           draggable={"false"}
           format={"png"}
         />
